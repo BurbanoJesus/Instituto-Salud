@@ -1,0 +1,305 @@
+* {	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-webkit-box-sizing: border-box;
+	-ms-webkit-box-sizing: border-box;
+	-o-webkit-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	font-size: 16px;
+}
+
+/*Estilo para header*/
+/*---------------------*/
+header {
+	width: 1007px;
+	margin:auto;
+	/*border: 2px solid grey;*/
+	position: relative;
+	font-family: 'Nunito sans', sans-serif;
+}
+
+header img#banner{
+	height: 154px;
+	/*margin-bottom: -6px;*/
+
+}
+
+
+
+header label {
+	top: 0;
+	width: 1007px;
+	height: 50px;
+    background:#392C5F;
+	display: flex;
+	align-items: center;
+	
+}
+
+header label span{
+	text-align: center;
+	margin: auto;
+    color: #fff;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    border: 2px solid grey;
+}
+
+
+
+#contentreg {
+
+}
+
+/* pestaña registro jefes*/
+section 
+{
+
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.pad-basic
+
+{
+padding:.5%; 
+	
+}
+
+.no-btm
+{
+	margin-bottom:0%;
+	background:#392C5F;
+}
+
+.btn-der
+{
+	text-align: right;
+}
+
+table#tabla th.short {
+	width: 100px;
+}
+
+table#tabla td.short {
+	width: 100px;
+
+}
+
+table#tabla td.short input[type="text"] {
+	width: 100px;
+}
+/*---------------------*/
+
+
+
+
+/*Estilo para main*/
+/*---------------------*/
+main {
+	width: 1007px;
+	margin:auto;
+	margin-top: 20px;
+	/*border: 2px solid grey;*/
+	display: block;
+	min-height: 250px;
+
+}
+
+/*.content{
+	width: 100%;
+	min-height: 500px;
+	border: 2px solid grey;
+	margin: auto;
+	display: flex;
+}
+
+.content img{
+	width: 64px;
+	height: 64px;
+	margin: auto;
+}
+
+.loading{
+	height: 42px;
+	background: url(../img/loading.gif) no-repeat;
+	display: none;
+}
+*/
+/*---------------------*/
+
+/*Estilo para footer*/
+/*---------------------*/
+footer {
+	background: url(../img/índice.png);
+	margin: auto;
+	width: 1007px;
+	height: 237px;
+	position: relative;
+	margin-bottom: 20px;
+	/*border: 2px solid grey;*/
+}
+
+footer div.footer {
+	position: absolute;
+	width: 50%;
+	top: 60px;
+	margin-left: 15px;
+	/*border: 2px solid grey;*/
+}
+
+footer div.footer a{
+	display: table;
+	text-decoration: none;
+	margin-top: 3px;
+	/*border: 2px solid grey;*/	
+}
+
+.llegar{
+	position: absolute;
+	align-items: center;
+	bottom: 18px;
+	right: 18px;
+	display: flex;
+}
+
+.llegar i.iconmarker{
+	font-size: 14px;
+	color:brown;
+}
+
+.llegar a{
+	font-family: 'Nunito sans', sans-serif;
+	font-size: 14px;
+	color: #66656D;
+	text-decoration: none;
+
+}
+/*---------------------*/
+
+/*Modal*/
+/*---------------------*/
+#modal.modal .modal-dialog{
+	width: auto;
+	text-align: center;
+	
+}
+
+#modal.modal .modal-content{
+	width: 500px;
+	margin: auto;
+	margin-top: 200px;
+}
+
+#modal.modal * .modal-body{
+	padding: 28px;
+	margin:auto;
+}
+
+#modal.modal * .modal-footer{
+	padding: 8px;
+}
+/*---------------------*/
+
+/*Responsive*/
+/*---------------------*/
+@media screen and (max-width: 760px){
+	.modal-content{
+	/*width: 400px;*/
+}
+}
+/*---------------------*/
+
+
+
+/*Botones*/
+/*---------------------*/
+.button{
+	background: #392C5F;
+	color: #fff;
+	display: flex;
+	font-size: 1.25em; 
+	padding: 10px 30px;
+	margin: 20px;
+	min-width: 200px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	border-radius: 50px;
+
+}
+/*boton con display inline*/
+.inline{
+	display: inline-flex;
+	font-size: 1em; 
+    padding: 8px 25px;
+	margin: 6px;
+	min-width: 100px;
+
+}
+
+span.tag{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	background: #0C5472;
+	color: #fff;
+	display: inline-block;
+	font-size: 0.675em; 
+	padding: 5px 12px;
+	width: auto;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	}
+.divtag{
+	background: #fff;
+	display: none;
+	position: absolute;
+	width: 150px;
+	top: 33px;
+	right: 0px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	text-align: center;
+
+	}
+	.divtag a{
+		color: rgb(0,0,0);
+		text-decoration: none;
+		display: inline-block;
+		
+	}
+
+
+.action-button1 {
+	width: 100px;
+	background: #392C5F;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	cursor: pointer;
+	padding: 6px 3px;
+	margin: 2px 5px;
+	border-radius: 3px;
+}
+
+.action-button1:hover {
+	color: #DEBE1F;
+
+}
+
+.btn-default{
+padding: 6px 3px;
+width: 100px;
+font-weight: bold;
+}
+
+

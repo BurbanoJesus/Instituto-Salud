@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: file:///C:/Users/Fc%20Barcelona/Documents/Documentos/Decimo%20Semestre/wwwsqldesigner-master/index.html -->
+<sql>
+<datatypes db="mysql">
+	<group label="Numeric" color="rgb(238,238,170)">
+		<type label="Integer" length="0" sql="INTEGER" quote=""/>
+	 	<type label="TINYINT" length="0" sql="TINYINT" quote=""/>
+	 	<type label="SMALLINT" length="0" sql="SMALLINT" quote=""/>
+	 	<type label="MEDIUMINT" length="0" sql="MEDIUMINT" quote=""/>
+	 	<type label="INT" length="0" sql="INT" quote=""/>
+		<type label="BIGINT" length="0" sql="BIGINT" quote=""/>
+		<type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+		<type label="Single precision" length="0" sql="FLOAT" quote=""/>
+		<type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+	</group>
+
+	<group label="Character" color="rgb(255,200,200)">
+		<type label="Char" length="1" sql="CHAR" quote="'"/>
+		<type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+		<type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+		<type label="Binary" length="1" sql="BINARY" quote="'"/>
+		<type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+		<type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+	</group>
+
+	<group label="Date &amp; Time" color="rgb(200,255,200)">
+		<type label="Date" length="0" sql="DATE" quote="'"/>
+		<type label="Time" length="0" sql="TIME" quote="'"/>
+		<type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+		<type label="Year" length="0" sql="YEAR" quote=""/>
+		<type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+	</group>
+	
+	<group label="Miscellaneous" color="rgb(200,200,255)">
+		<type label="ENUM" length="1" sql="ENUM" quote=""/>
+		<type label="SET" length="1" sql="SET" quote=""/>
+		<type label="Bit" length="0" sql="bit" quote=""/>
+	</group>
+</datatypes><table x="9" y="47" name="familias">
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="casa_numero" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="familia_numero" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_familia</part>
+</key>
+</table>
+<table x="12" y="159" name="identificacion_ubicacion">
+<row name="numero_vivienda" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="numero_familias_por_vivenda" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="sisben" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="departamento" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="municipio" null="0" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+</row>
+<row name="resguardo" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="comunidad" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="vereda" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+</row>
+<row name="barrio" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+</row>
+<row name="ubicacion_ref" null="0" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_familia</part>
+</key>
+</table>
+<table x="260" y="12" name="riesgos_ubicacion">
+<row name="zona_inundable" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="margen_rios" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="zona_ladera" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="falda_montana" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="relleno" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="otro_riesgo" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="cual_otro_riesgo" null="0" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_familia</part>
+</key>
+</table>
+<table x="144" y="42" name="visitas">
+<row name="id_visita" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="fecha_visita" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_visita</part>
+</key>
+</table>
+<table x="36" y="463" name="integrantes">
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="cod_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(2)</datatype>
+</row>
+<row name="nombres" null="0" autoincrement="0">
+<datatype>VARCHAR(80)</datatype>
+</row>
+<row name="fecha_nac_dia" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="fecha_nac_mes" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="fecha_nac_ano" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="edad_dias" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="edad_meses" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="edad_anos" null="0" autoincrement="0">
+<datatype>INT(3)</datatype>
+</row>
+<row name="sexo" null="0" autoincrement="0">
+<datatype>CHAR(9)</datatype>
+</row>
+<row name="parentesco_familiar" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="tipo_doc_identificacion" null="0" autoincrement="0">
+<datatype>CHAR(3)</datatype>
+</row>
+<row name="numero_doc_identificacion" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="escolaridad" null="0" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+</row>
+<row name="ocupacion" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="ocupacion_otro" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="tipo_vinculacion_sgsss" null="0" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+</row>
+<row name="nombre_eps" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="grupo_etnico" null="0" autoincrement="0">
+<datatype>VARCHAR(2)</datatype>
+</row>
+<row name="ge_indigenas_a" null="1" autoincrement="0">
+<datatype>CHAR(30)</datatype>
+</row>
+<row name="ge_indigenas_b" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="ge_indigenas_c" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="ge_indigenas_d" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="ge_indigenas_e" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="ge_indigenas_f" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="grupo_etnico_otro" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="desplazado" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="discapacidad" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="discapacidad_otro" null="1" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="cual_discapacidad" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_integrante</part>
+</key>
+</table>
+<table x="264" y="257" name="menores_a_1">
+<row name="id_menor_a_1" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="control_crec_desa" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="lactancia_exclusiva" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="peso_al_nacer" null="0" autoincrement="0">
+<datatype>DECIMAL(3)</datatype>
+</row>
+<row name="peso" null="0" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+</row>
+<row name="talla" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="imc" null="0" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+</row>
+<row name="estado_nutricional" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="motricidad" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="audicion_lenguaje" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="personal_social" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="senales_maltrato" null="0" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+</row>
+<row name="problemas_visuales" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="problemas_auditivos" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="carnet" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="bcg" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hepatitisb_rn" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hepatitisb_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hepatitisb_2" null="0" autoincrement="0">
+<datatype>CHAR</datatype>
+</row>
+<row name="hepatitisb_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hib_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hib_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hib_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="influenza_antigripal_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="influenza_antigripal_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="rotavirus_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="rotavirus_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="neumococo_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="neumococo_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="neumococo_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="consume_medicamento" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="cual_medicamento" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="canalizado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="remitido" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="remitido_otro" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="valorado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_menor_a_1</part>
+</key>
+</table>
+<table x="635" y="26" name="de_5_a_9">
+<row name="id_de_5_a_9" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="control_crec_desa" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="lactancia_exclusiva" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="peso" null="0" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+</row>
+<row name="talla" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="imc" null="0" autoincrement="0">
+<datatype>DECIMAL(3)</datatype>
+</row>
+<row name="estado_nutricional" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="motricidad" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="audicion_lenguaje" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="personal_social" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="senales_maltrato" null="0" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+</row>
+<row name="dtp" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="vop" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="srp" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="caries" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="aplicacion_fluor" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="aplicacion_sellantes" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="seda_dental" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="num_cepilladas" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="desparasitado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="desparasitado_d" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="desparasitado_m" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="desparasitado_a" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="consume_medicamento" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="cual_medicamento" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="canalizado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="remitido" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="remitido_otro" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="valorado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_de_5_a_9</part>
+</key>
+</table>
+<table x="461" y="20" name="de_1_a_5">
+<row name="id_de_1_a_5" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="control_crec_desa" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="lactancia_exclusiva" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="peso_al_nacer" null="0" autoincrement="0">
+<datatype>DECIMAL(3)</datatype>
+</row>
+<row name="peso" null="0" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+</row>
+<row name="talla" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="imc" null="0" autoincrement="0">
+<datatype>DECIMAL(3)</datatype>
+</row>
+<row name="estado_nutricional" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="motricidad" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="audicion_lenguaje" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="personal_social" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="senales_maltrato" null="0" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+</row>
+<row name="problemas_visuales" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="problemas_auditivos" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="carnet" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="bcg" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_r1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="polio_r2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="dpt_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="dpt_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="dpt_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="dpt_r1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="dpt_r2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hepatitisb_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hepatitisb_2" null="0" autoincrement="0">
+<datatype>CHAR</datatype>
+</row>
+<row name="hepatitisb_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hib_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hib_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hib_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="srp_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="srp_r1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="influenza_antigripal_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="influenza_antigripal_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="fiebre_amarilla" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="num_cepilladas" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="desparasitado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="desparasitado_d" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="desparasitado_m" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="desparasitado_a" null="0" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+</row>
+<row name="consume_medicamento" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="cual_medicamento" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="canalizado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="remitido" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="remitido_otro" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="valorado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_de_1_a_5</part>
+</key>
+</table>
+<table x="811" y="12" name="de_10_a_59">
+<row name="id_de_10_a_59" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="metodo_planificacion" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="tiempo_con_metodo" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="controles_ult_ano_planifi" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="motivo_no_planifi" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="citologia" null="0" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+</row>
+<row name="citologia_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="citologia_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="citologia_a" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="autoexamen_seno" null="0" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+</row>
+<row name="autoexamen_seno_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="autoexamen_seno_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="autoexamen_seno_a" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="violencia_contra_mujer" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="v_contra_mujer_valorado" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="carnet" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_10a18_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_10a18_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_10a18_3" null="0" autoincrement="0">
+<datatype>CHAR</datatype>
+</row>
+<row name="td_tt_10a18_4" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_10a18_5" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_19a49_1" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_19a49_2" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_19a49_3" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_19a49_4" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="td_tt_19a49_5" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="fiebre_amararilla_m" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="examen_prostata" null="0" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+</row>
+<row name="fiebre_amarilla_h" null="0" autoincrement="0">
+<datatype>CHAR</datatype>
+</row>
+<row name="seda_dental" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="numero_cepilladas" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="probremas_visuales" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="valor_glicemia" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="estado_glicemia" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="peso" null="0" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+</row>
+<row name="talla" null="1" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+<default>NULL</default></row>
+<row name="imc" null="1" autoincrement="0">
+<datatype>DECIMAL(3)</datatype>
+<default>NULL</default></row>
+<row name="estado_nutricional" null="0" autoincrement="0">
+<datatype>CHAR(9)</datatype>
+</row>
+<row name="pulso_minuto" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="presion_arterial" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="estado_presion_arterial" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default></row>
+<row name="consume_medicamento" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="cual_medicamento" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="canalizado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="remitido" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="remitido_otro" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="valorado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_de_10_a_59</part>
+</key>
+</table>
+<table x="1009" y="17" name="de_60_mas">
+<row name="id_de_60_mas" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="peso" null="1" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+<default>NULL</default></row>
+<row name="talla" null="1" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+<default>NULL</default></row>
+<row name="imc" null="0" autoincrement="0">
+<datatype>DECIMAL(3)</datatype>
+</row>
+<row name="citologia_ult_5" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="citologia_ult_4" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="citologia_ult_1" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="autoexamen_seno" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="examen_prostata" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="examen_prostata_res" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="seda_dental" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="num_cepilladas" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="piedra_piezas_dentales" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="uso_protesis_dentales" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="valor_glicemia" null="0" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+</row>
+<row name="estado_glicemia" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="pulso_minuto" null="1" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+<default>NULL</default></row>
+<row name="presion_sistolica" null="1" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+<default>NULL</default></row>
+<row name="presion_diastolica" null="1" autoincrement="0">
+<datatype>INTEGER(3)</datatype>
+<default>NULL</default></row>
+<row name="pam" null="1" autoincrement="0">
+<datatype>DECIMAL(4)</datatype>
+<default>NULL</default></row>
+<row name="estado_presion" null="1" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<default>NULL</default></row>
+<row name="actividad_fisica" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="problemas_visuales" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="vacu_tipo_biologico" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="vacu_num_dosis" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="vacu_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="vacu_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="vacu_a" null="1" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+<default>NULL</default></row>
+<row name="consume_medicamento" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="cual_medicamento" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default></row>
+<row name="canalizado" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="remitido" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="remitido_otro" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default></row>
+<row name="valorado" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_de_60_mas</part>
+</key>
+</table>
+<table x="1194" y="10" name="gestacion">
+<row name="id_gestacion" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="embarazada" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="control_prenatal" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="control_prenatal_quien" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="control_prenatal_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="control_prenatal_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="control_prenatal_a" null="1" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+<default>NULL</default></row>
+<row name="ante_gestaciones" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ante_partos" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ante_abortos" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ante_cesareas" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="ante_num_hijos_vivos" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ultimo_parto_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ultimo_parto_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ultimo_parto_a" null="1" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+<default>NULL</default></row>
+<row name="califi_riesgo_materno" null="1" autoincrement="0">
+<datatype>CHAR(4)</datatype>
+<default>NULL</default></row>
+<row name="ultimo_regla_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ultimo_regla_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="ultimo_regla_a" null="1" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+<default>NULL</default></row>
+<row name="fecha_prob_parto_d" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="fecha_prob_parto_m" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="fecha_prob_parto_a" null="1" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+<default>NULL</default></row>
+<row name="gestacion" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="serologia" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="vih" null="1" autoincrement="0">
+<datatype>CHAR(8)</datatype>
+<default>NULL</default></row>
+<row name="odontologia" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="td_tt_10a18_1" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="td_tt_10a18_2" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="td_tt_10a18_3" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="td_tt_19a49_1" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="td_tt_19a49_2" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="td_tt_19a49_3" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="suplementacion" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="sedentarismo" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="fuma" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="consume_alcohol" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="tipo_parto" null="1" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<default>NULL</default></row>
+<row name="atencion_parto" null="1" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<default>NULL</default></row>
+<row name="atencion_institucional" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="planificacion" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="consume_medicamento" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="cual_medicamento" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default></row>
+<row name="canalizado" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="remitido" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="remitido_otro" null="1" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+<default>NULL</default></row>
+<row name="valorado" null="1" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+<default>NULL</default></row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_gestacion</part>
+</key>
+</table>
+<table x="1389" y="41" name="antecedentes">
+<row name="id_ante_elemento" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="nombre_tabla" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="nombre_elemento" null="0" autoincrement="0">
+<datatype>VARCHAR(12)</datatype>
+</row>
+<row name="estado" null="0" autoincrement="0">
+<datatype>VARCHAR(2)</datatype>
+</row>
+<row name="edad_inicio" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="frecuencia" null="0" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+</row>
+<row name="observaciones" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="id_integrante" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_ante_elemento</part>
+</key>
+</table>
+<table x="1589" y="330" name="esta_nacidos">
+<row name="id_esta_nacidos" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="nombres" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="sexo" null="0" autoincrement="0">
+<datatype>CHAR(9)</datatype>
+</row>
+<row name="edad" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="registrado" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="parto_atendido_por" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="parto_atendido_otro" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="parto_fecha_d" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="parto_fecha_m" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="parto_fecha_a" null="0" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_esta_nacidos</part>
+</key>
+</table>
+<table x="1403" y="308" name="esta_mortalidad">
+<row name="id_esta_mortalidad" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="nombres" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="sexo" null="0" autoincrement="0">
+<datatype>CHAR(9)</datatype>
+</row>
+<row name="edad" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="causa" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="codigo_cie10" null="0" autoincrement="0">
+<datatype>CHAR(5)</datatype>
+</row>
+<row name="parto_fecha_d" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="parto_fecha_m" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="parto_fecha_a" null="0" autoincrement="0">
+<datatype>INTEGER(4)</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_esta_mortalidad</part>
+</key>
+</table>
+<table x="1413" y="610" name="esta_morbilidad">
+<row name="id_esta_morbilidad" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="nombres" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="sexo" null="0" autoincrement="0">
+<datatype>CHAR(9)</datatype>
+</row>
+<row name="edad" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="causa" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="codigo_cie10" null="0" autoincrement="0">
+<datatype>CHAR(5)</datatype>
+</row>
+<row name="id_familia" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_esta_morbilidad</part>
+</key>
+</table>
+<table x="27" y="1329" name="caracteristicas">
+<row name="id_caracteristicas" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="piso" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="paredes" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="techo" null="0" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+</row>
+<row name="num_habitaciones" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="ventilacion_adecuada" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="cocina_con" null="0" autoincrement="0">
+<datatype>VARCHAR(15)</datatype>
+</row>
+<row name="ubicacion_cocina" null="0" autoincrement="0">
+<datatype>CHAR(6)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_caracteristicas</part>
+</key>
+</table>
+<table x="203" y="1285" name="tratamiento_agua">
+<row name="id_tratamiento_agua" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="sin_tratamiento" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="filtrada" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="hervida" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="clorada" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="otro" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_tratamiento_agua</part>
+</key>
+</table>
+<table x="263" y="1499" name="animales">
+<row name="id_animales" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="tipo_animal" null="0" autoincrement="0">
+<datatype>CHAR(9)</datatype>
+</row>
+<row name="tiene_animal" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="num_vacunados" null="1" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+<default>NULL</default></row>
+<row name="num_no_vacunados" null="0" autoincrement="0">
+<datatype>INTEGER(2)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_animales</part>
+</key>
+</table>
+<table x="409" y="1293" name="condi_elementos">
+<row name="id_condi_elemento" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="nombre_tabla" null="0" autoincrement="0">
+<datatype>VARCHAR(40)</datatype>
+</row>
+<row name="nombre_elemento" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+</row>
+<row name="existe_elemento" null="0" autoincrement="0">
+<datatype>CHAR(2)</datatype>
+</row>
+<row name="id_visita" null="0" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_condi_elemento</part>
+</key>
+</table>
+<table x="740" y="1303" name="observaciones">
+<row name="id_observacion" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="observaciones_gen" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="observaciones_visita" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+</row>
+<row name="nombres_visitador" null="0" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+</row>
+<row name="id_visita" null="1" autoincrement="0">
+<datatype>INTEGER(11)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_observacion</part>
+</key>
+</table>
+<table x="922" y="1317" name="usuarios">
+<row name="id_usu" null="0" autoincrement="1">
+<datatype>INTEGER(11)</datatype>
+</row>
+<row name="nick_name" null="0" autoincrement="0">
+<datatype>VARCHAR(80)</datatype>
+</row>
+<row name="password" null="0" autoincrement="0">
+<datatype>VARCHAR(255)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id_usu</part>
+</key>
+</table>
+</sql>

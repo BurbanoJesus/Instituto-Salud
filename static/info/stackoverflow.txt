@@ -1,0 +1,9 @@
+Dudas SactkOverflow
+
+-Hacer contenedor padre se ajuste al tamaño del hijo el cual tiene un ancho superior al de la ventana
+-Modificar variables en clases php
+-PHP mysql insertar en un campo tipo varchar los valores nulo o una cadena de texto
+-Cuando se tienen dos contenedores con elementos flex se alterna un espacio vertical indeseado(Observaciones)
+-nth-of-type(odd) no funciona cuando los elementos de la lista estan en diferentes partes del DOM
+-SQL agrupar por el ultimo registro
+

@@ -1,0 +1,37 @@
+Identificacion:
+-Numero de familias por vivienda
+-Resguardo
+-Comunidad
+
+
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (1,'Los pinos',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (2,'El prado',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (3,'Palmita',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (4,'Porvenir',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (5,'San Francisco',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (6,'San Carlos',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (7,'Obrero',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (8,'Panamericano',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (9,'Argelia',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (10,'Sucre',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (11,'Cuatro de Junio',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (12,'Capilla',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (13,'Pascuita',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (14,'Valencia',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (15,'San Antonio',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (16,'La Paz',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (17,'La victoria',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (18,'Chapinero',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (19,'Niño Dios',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (20,'Eduardo Santos',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (21,'Las Américas',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (22,'San Fernando',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (23,'Avenida Cementerio',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (24,'Primavera',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (25,'Refugio de La Venta',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (26,'Carlos Lleras',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (27,'Villa Mercedes',1);
+INSERT INTO `barrios`(`id_barrio`, `nom_barrio`, `id_municipio`) VALUES (28,'Villa Catalina e Inmaculada',1);
+
+
+$sql = "UPDATE menores_a_1 SET control_crec_desa = '$tb2_control_crecimiento', lactancia_exclusiva = '$tb2_lactancia', peso = $tb2_peso talla = $tb2_talla, imc = $tb2_imc, peso_al_nacer = $tb2_peso_al_nacer, estado_nutricional = '$tb2_estado_nutricional', motricidad_gruesa = '$tb2_motricidad_gruesa', motricidad_fina = '$tb2_motricidad_fina', audicion_lenguaje = '$tb2_audicion_lenguaje', personal_social = '$tb2_personal_social', maltrato_fisico = '$tb2_maltrato_fisico', maltrato_psico = '$tb2_maltrato_psicologico', problemas_visuales = '$tb2_problema_visual', probemas_auditivos = '$tb2_problema_auditivo', carnet = '$tb2_carnet', bcg = '$tb2_bcg', polio_1 = '$tb2_polio1', polio_2 ='$tb2_polio2', polio_3 = '$tb2_polio3', dpt_1 = '$tb2_dpt1', dpt_2 = '$tb2_dpt2', dpt_3 = '$tb2_dpt3', hepatitisb_rn = '$tb2_rn', hepatitisb_1 = '$tb2_hepatitisb1', hepatitisb_2  = '$tb2_hepatitisb2', hepatitisb_3 = '$tb2_hepatitisb3', hib_1 = '$tb2_hib1', hib_2 = '$tb2_hib2', hib_3 = '$tb2_hib3', influenza_antigripal_1 = '$tb2_influenza1', influenza_antigripal_2 = '$tb2_influenza2', rotavirus_1 = '$tb2_rotavirus1', rotavirus_2 = '$tb2_rotavirus2', neumococo_1 = '$tb2_neumococo1', neumococo_2 = '$tb2_neumococo2', neumococo_3 = '$tb2_neumococo3', consume_medicamento = '$tb2_consume_medica', cual_medicamento = '$tb2_consume_medica_txt', canalizado = '$tb2_canalizado', remitido = $tb2_remitido, remitido_otro = '$tb2_otra_remision', valorado = '$tb2_valorado', observaciones = '$tb2_observaciones', id_integrante = '$id_integrante', id_familia = $id_visita";

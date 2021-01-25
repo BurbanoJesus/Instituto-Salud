@@ -1,0 +1,17 @@
+DELETE FROM `animales`;
+DELETE FROM `caracteristicas`;
+DELETE FROM `tratamiento_agua`;
+DELETE FROM `condiciones`;
+DELETE FROM `menores_a_1`;
+DELETE FROM `de_1_a_5`;
+DELETE FROM `de_5_a_9`;
+DELETE FROM `de_10_a_59`;
+DELETE FROM `de_60_mas`;
+DELETE FROM `gestacion`;
+DELETE FROM `antecedentes`;
+DELETE FROM `estadis_morbilidad`;
+DELETE FROM `estadis_mortalidad`;
+DELETE FROM `estadis_nacidos`;
+DELETE FROM `observaciones`;
+DELETE FROM `identificacion_ubicacion`;
+DELETE FROM `riesgos_ubicacion`;
